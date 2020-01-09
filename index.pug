@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head 
+    title Hello, World!
+  body
+    h1 Hello, World!
+    .remark
+      p Pug rocks!
+      -
+        let items = []
+        for ( let i=0; i<5; i++ ) { 
+         items.push(`item #${i+1}`)
+        }
+      ol
+        each item in items
+          li=item
+        else 
+          p 
+            |Items
+            |list
+            |doesn't
+            |have
+            |any items
+    script
+      include script.js
